@@ -1,0 +1,30 @@
+# ©AngelaMos | 2026
+# ollama.compose.yml
+
+name: nadezhda-ollama
+
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: nadezhda-ollama
+    ports:
+      - "127.0.0.1:${OLLAMA_HOST_PORT:-39847}:11434"
+    volumes:
+      - nadezhda-ollama-models:/root/.ollama
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        ollama serve &
+        until ollama list >/dev/null 2>&1; do sleep 1; done
+        ollama pull qwen2.5:7b
+        wait
+    healthcheck:
+      test: ["CMD-SHELL", "ollama list | grep -q qwen2.5"]
+      interval: 10s
+      timeout: 5s
+      retries: 60
+      start_period: 30s
+    restart: unless-stopped
+
+volumes:
+  nadezhda-ollama-models:

@@ -1,0 +1,27 @@
+# ©AngelaMos | 2026
+# .gitignore
+
+# private dev + research material (never public)
+docs/
+
+# Go build artifacts
+/nadezhda
+/bin/
+*.test
+*.out
+*.prof
+
+# local runtime data (SQLite store + WAL sidecars)
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+/data/
+
+# large local KEV catalog snapshot (manual download; tests use kev-sample.json)
+/testdata/kev/kev-full.json
+
+# env / secrets / local overrides
+.env
+*.local.yaml
+config.local.yaml

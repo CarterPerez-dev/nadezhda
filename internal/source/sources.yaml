@@ -1,0 +1,58 @@
+# ©AngelaMos | 2026
+# sources.yaml
+
+- name: krebs
+  title: Krebs on Security
+  url: https://krebsonsecurity.com/feed/
+  type: rss
+  weight: 1.0
+  tags: [news]
+  enabled: true
+
+- name: thehackernews
+  title: The Hacker News
+  url: https://feeds.feedburner.com/TheHackersNews
+  type: rss
+  weight: 0.8
+  tags: [news]
+  enabled: true
+
+- name: bleepingcomputer
+  title: BleepingComputer
+  url: https://www.bleepingcomputer.com/feed/
+  type: rss
+  weight: 0.9
+  tags: [news]
+  enabled: true
+
+- name: securityweek
+  title: SecurityWeek
+  url: https://www.securityweek.com/feed/
+  type: rss
+  weight: 0.8
+  tags: [news]
+  enabled: true
+
+- name: darkreading
+  title: Dark Reading
+  url: https://www.darkreading.com/rss.xml
+  type: rss
+  weight: 0.8
+  tags: [news]
+  enabled: true
+
+- name: theregister
+  title: The Register (Security)
+  url: https://www.theregister.com/security/headlines.atom
+  type: rss
+  weight: 0.8
+  tags: [news]
+  enabled: true
+
+- name: cisa
+  title: CISA Advisories
+  url: https://www.cisa.gov/cybersecurity-advisories/all.xml
+  type: rss
+  weight: 1.0
+  tags: [advisory, gov]
+  enabled: true
